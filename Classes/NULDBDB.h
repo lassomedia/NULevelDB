@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import <NULevelDB/NULDBSlice.h>
-#import <NULevelDB/NULDBSerializable.h>
+#import "NULDBSlice.h"
+#import "NULDBSerializable.h"
 
 
 extern NSString *NULDBErrorDomain;

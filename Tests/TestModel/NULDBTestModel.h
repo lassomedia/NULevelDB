@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import <NULevelDB/NULDBDB.h>
+#import "NULDBDB.h"
 
 
 @interface NULDBTestModel :

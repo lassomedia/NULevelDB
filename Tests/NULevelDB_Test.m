@@ -8,9 +8,9 @@
 
 #import "NULevelDB_Test.h"
 
-#import <NULevelDB/NULDBDB.h>
-#import <NULevelDB/NULDBSlice.h>
-#import <NULevelDB/NULDBWriteBatch.h>
+#import "NULDBDB.h"
+#import "NULDBSlice.h"
+#import "NULDBWriteBatch.h"
 
 #import "NULDBDB+Testing.h"
 
