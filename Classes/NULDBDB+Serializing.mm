@@ -34,10 +34,10 @@
 #define NULDBIsPropertyKey(_key_) ([_key_ hasSuffix:@"NUProperty"])
 #define NULDBPropertyIdentifierFromKey(_key_) ([_key_ substringToIndex:[_key_ rangeOfString:@"|"].location])
 
-#define NULDBArrayToken(_array_, _count_) ([NSString stringWithFormat:@"%u:%@|NUArray", _count_, NSStringFromClass([[_array_ lastObject] class])])
+#define NULDBArrayToken(_array_, _count_) ([NSString stringWithFormat:@"%ju:%@|NUArray", (uintmax_t)_count_, NSStringFromClass([[_array_ lastObject] class])])
 #define NULDBIsArrayToken(_key_) ([_key_ hasSuffix:@"NUArray"])
 
-#define NULDBArrayIndexKey(_key_, _index_) ([NSString stringWithFormat:@"%u:%@:NUIndex", _index_, _key_])
+#define NULDBArrayIndexKey(_key_, _index_) ([NSString stringWithFormat:@"%ju:%@:NUIndex", (uintmax_t)_index_, _key_])
 #define NULDBIsArrayIndexKey(_key_) ([_key_ hasSuffix:@"NUIndex"])
 #define NULDBArrayCountFromKey(_key_) ([[_key_ substringToIndex:[_key_ rangeOfString:@":"].location] intValue])
 
