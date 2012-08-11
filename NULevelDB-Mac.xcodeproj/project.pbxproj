@@ -41,6 +41,7 @@
 		4E82782E13EAF5A000C64821 /* two_level_iterator.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4E8277DB13EAF49500C64821 /* two_level_iterator.cc */; };
 		4E82782F13EAF5AB00C64821 /* port_posix.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4E8277C413EAF49500C64821 /* port_posix.cc */; };
 		4E82788613EAFF8900C64821 /* db_iter.cc in Sources */ = {isa = PBXBuildFile; fileRef = 4E82778413EAF49500C64821 /* db_iter.cc */; };
+		554C035215D5FC2F007E7400 /* libleveldb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82780113EAF4A600C64821 /* libleveldb.a */; };
 		55B9C57515D5F15E00351CC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E82772813EAF44500C64821 /* Foundation.framework */; };
 		55B9C58015D5F1C400351CC2 /* NULDBCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E82784B13EAF85500C64821 /* NULDBCache.mm */; };
 		55B9C58115D5F1C400351CC2 /* NULDBComparator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4E82784D13EAF85500C64821 /* NULDBComparator.mm */; };
@@ -250,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554C035215D5FC2F007E7400 /* libleveldb.a in Frameworks */,
 				55B9C57515D5F15E00351CC2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +622,7 @@
 		4E82771913EAF44500C64821 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = "Nulayer Inc";
 			};
 			buildConfigurationList = 4E82771C13EAF44500C64821 /* Build configuration list for PBXProject "NULevelDB-Mac" */;
@@ -763,7 +765,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 			};
 			name = Debug;
@@ -780,7 +782,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -789,6 +791,7 @@
 		4E82780A13EAF4A600C64821 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/leveldb.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_FAST_OBJC_DISPATCH = NO;
@@ -808,6 +811,7 @@
 		4E82780B13EAF4A600C64821 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/leveldb.dst;
 				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
 				GCC_FAST_OBJC_DISPATCH = NO;
@@ -827,6 +831,7 @@
 		55B9C57E15D5F15E00351CC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -849,6 +854,7 @@
 		55B9C57F15D5F15E00351CC2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
