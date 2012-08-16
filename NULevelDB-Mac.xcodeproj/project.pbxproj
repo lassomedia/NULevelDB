@@ -804,7 +804,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/leveldb/include/ $(PROJECT_DIR)/leveldb/";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/leveldb/include/\" \"$(PROJECT_DIR)/leveldb/\"";
 			};
 			name = Debug;
 		};
@@ -824,7 +824,7 @@
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/leveldb/include/ $(PROJECT_DIR)/leveldb/";
+				USER_HEADER_SEARCH_PATHS = "\"$(PROJECT_DIR)/leveldb/include/\" \"$(PROJECT_DIR)/leveldb/\"";
 			};
 			name = Release;
 		};
@@ -838,8 +838,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NULevelDB/NULevelDB-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/leveldb/include/",
-					"$(PROJECT_DIR)/leveldb/",
+					"\"$(PROJECT_DIR)/leveldb/include/\"",
+					"\"$(PROJECT_DIR)/leveldb/\"",
 				);
 				INFOPLIST_FILE = "NULevelDB/NULevelDB-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
@@ -861,8 +861,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NULevelDB/NULevelDB-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/leveldb/include/",
-					"$(PROJECT_DIR)/leveldb/",
+					"\"$(PROJECT_DIR)/leveldb/include/\"",
+					"\"$(PROJECT_DIR)/leveldb/\"",
 				);
 				INFOPLIST_FILE = "NULevelDB/NULevelDB-Info.plist";
 				OTHER_CFLAGS = "-DDEBUG";
