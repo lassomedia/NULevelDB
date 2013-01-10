@@ -32,6 +32,9 @@ using namespace leveldb;
 
 #pragma mark -
 @implementation NULDBDB
+{
+    BOOL _markedForDestruction;
+}
 
 @synthesize db, location, compacting;
 //@synthesize keyType;
@@ -53,10 +56,16 @@ NSString *NULDBErrorDomain = @"NULevelDBErrorDomain";
 }
 
 - (void)dealloc {
+    BOOL oldMarkedForDestruction = _markedForDestruction;
+    NSString *oldLocation = [self.location copy];
+    
     self.db = NULL;
     delete classIndexKey;
     self.location = nil;
     [super dealloc];
+    
+    if (oldMarkedForDestruction)
+        [NULDBDB destroyDatabase:oldLocation];
 }
 
 
@@ -163,6 +172,10 @@ NSString *NULDBErrorDomain = @"NULevelDBErrorDomain";
     Options options;
     self.db = NULL;
     [[self class] destroyDatabase:self.location];
+}
+
+- (void)markForDestruction {
+    _markedForDestruction = YES;
 }
 
 - (void)compact {

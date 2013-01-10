@@ -31,6 +31,7 @@ extern NSString *NULDBErrorDomain;
 - (void)compact;
 - (void)reopen;  // closes and opens the database; triggers a variety of maintenance routines on open
 - (void)destroy; // Deprecated - call +destroyDatabase: when you have no active pointers to your db
+- (void)markForDestruction; // Call +destroyDatabase: when the instance is deallocated
 
 // works like a stack (counter); feel free to use indiscriminately
 + (void)enableLogging;
